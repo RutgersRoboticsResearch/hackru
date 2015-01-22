@@ -1,0 +1,33 @@
+<%= page_header do %>
+  <h1>
+    <%= avatar_profile_link @user, {}, class: '' %>
+    <%= @user.full_name %>
+  </h1>
+<% end %>
+
+<%= link_to "Albums", albums_path(@user), class: 'btn' %>
+
+<% if signed_in? %>
+<span id="friend-status">
+  <% if current_user.full_name != @user.full_name  %>
+  <% if current_user.friends.include?(@user) || current_user.pending_friends.include?(@user) %>
+    <%= link_to "Edit Friendship", edit_user_friendship_path(friend_id: @user), class: 'btn' %>
+  <% else %>
+    <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: 'btn', id: 'add-friendship', data: { friend_id: @user.to_param } %>
+  <% end %>
+</span>
+<% end %>
+<% end %>
+
+<br />
+
+<% if @statuses %>
+  <h3><%= @user.first_name %>'s status updates:</h3>
+  <% @statuses.each do |status| %>
+    <div class="well">
+      <%= status.content %>
+      <hr />
+      <%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago
+    </div>
+  <% end %>
+<% end %>

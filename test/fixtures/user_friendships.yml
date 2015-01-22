@@ -1,0 +1,8 @@
+one:
+  user: miyamoto
+  friend: jon
+
+blocked_by_miyamoto:
+  user: miyamoto
+  friend: blocked_friend
+  state: 'blocked'

@@ -1,0 +1,37 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>In robotics, Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it. While this initially appears to be a chicken-and-egg problem there are several algorithms known for solving it, at least approximately, in tractable time for certain environments. Popular approximate solution methods include the particle filter and extended Kalman filter.
+
+
+<div class="row">
+  <div class="span8 offset2">
+    <%= page_header do %>
+      <h1>
+        <%= avatar_profile_link @status.user %>
+        <%= @status.user.full_name %>
+        <small><%= time_ago_in_words(@status.created_at) + " ago" %></small>
+      </h1>
+    <% end %>
+
+    <p>
+      <%= @status.content %>
+    </p>
+
+    <hr/>
+
+    <% if @status.document && @status.document.attachment? %>
+      <%= status_document_link @status%>
+      <% end %>
+      <hr/>
+
+    <div class="meta">
+      <%= link_to 'Back', statuses_path %>
+      <% if signed_in? && @status.user == current_user %>
+        |
+        <%= link_to "Edit", edit_status_path(@status) %> | 
+        <%= link_to "Delete", @status, method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+miyamoto:
+  first_name: "Musashi"
+  last_name: "Miyamoto"
+  email: "MiyamotoMusashi271828@gmail.com"
+  profile_name: "MiyamotoMusashi"
+  encrypted_password: "$2a$10$jR6OkSmaEDObF9pKztXVHO1J2bHwPdf/p6u7773sA7onMqrACOtL."
+
+jon:
+  first_name: "Jon"
+  last_name: "Marshall"
+  email: "JonMarshall@gmail.com"
+  profile_name: "JonMarshall"
+
+greg:
+  first_name: "Greg"
+  last_name: "Flow"
+  email: "Geflow@gmail.com"
+  profile_name: "GregFlow"
+
+blocked_friend:
+  first_name: "Blocked"
+  last_name: "Friend"
+  email: "blocked@gmail.com"
+  profile_name: "youblockedme"

@@ -1,0 +1,93 @@
+h3{
+	font-size: 4em;
+	margin: 1em;
+}
+
+.log{
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#redR{
+	color: #991411;
+}
+
+#faqHead{
+	text-align: center;
+}
+
+#slayer{
+	margin-top: 25%; 
+}
+
+#pitch{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height:100vh;
+
+}
+
+#logger{
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#pitch h1{
+	display: block;
+	font-size: 10em;
+	height: auto;
+ 	text-align: center;
+ 	font-style: i
+}
+
+#pitch h3{
+	margin-top: 1em;
+	font-size: 3em;
+	 text-align: center;
+}
+
+#pitch h4{
+
+	 text-align: center;
+}
+
+
+#faqHead{
+	width: 100%;
+	height: 400px;
+	background-color: #1D2326;
+}
+
+.mainContentDiv {
+	background:#DBFFFF;
+	margin-top:-1.9em;
+}
+
+.boxItems{
+	padding: 5px;
+	float: left;
+}
+
+.mainArticle{
+	float: left;
+	width: 300px;
+	height: 220px;
+	margin-top: 16px;
+	margin-left: 9px;
+	margin-right: 0px;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+.mainArticle h2{
+	font-size: 22px;
+	padding: 0px;
+	margin-top: 0px;
+	height: auto;
+}
+

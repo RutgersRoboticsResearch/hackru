@@ -1,0 +1,24 @@
+<%= page_header do %>
+  <h1>Sign In</h1>
+<% end %>
+
+<div id="Sign_In" class="row">
+	<div class="span4">
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "form-vertical"}) do |f| %>
+
+		<fieldset>
+			<%= f.input :email, input_html: { class: 'input-xlarge' } %>
+			<%= f.input :password, input_html: { class: 'input-xlarge' } %>
+
+			<% if devise_mapping.rememberable? -%>
+			<%= f.input :remember_me, as: :boolean, inline_label: "Remember Me", label: false %>
+			<% end -%>
+
+      <%= f.submit "Sign In", class: 'btn btn-primary' %><br />
+      <%= render "devise/shared/links" %>
+		</fieldset>
+		<% end %>
+	</div>
+	<div class="span8">
+	</div>
+</div>
